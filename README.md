@@ -4,7 +4,7 @@ This plugin provides a simple dsl to retrieve, as a Map, data parts of a GORM do
 
 ## Sample use
 
-Given a domain where User can many Blogs and a Blog can have many Posts, ...
+Given a domain where a User have can many Blogs and a Blog can have many Posts, ...
 
 ```groovy
 User user = User.findByEmail("tom@test.com")
