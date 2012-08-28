@@ -42,16 +42,18 @@ blog1User1.addToPosts(post)
 blog1User1.save(flush: true, failOnError: true)
 
 
-
-user1.asMap {
-    include "username"
+User user = User.findByEMail("tom@test.com")
+userMap user.asMap {
+    include "id", "username"
     load("blogs") {
-        include "title"
+        include "id", "title"
         load("posts") {
-            include "title"
+            include "id", "title"
             load("category") {
                 include "name"
             }
         }
     }
 }
+
+println 
